@@ -11,7 +11,9 @@
     <meta property="og:type" content="">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/theme/favicon.ico')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/logo/logo2.png')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
     @livewireStyles
@@ -26,9 +28,12 @@
                     <div class="header-info">
                         <ul>
                             <li>
-                                <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English <i class="fi-rs-angle-small-down"></i></a>
+                                <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English <i
+                                        class="fi-rs-angle-small-down"></i></a>
                                 <ul class="language-dropdown">
-                                    <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/1600px-Flag_of_Cambodia.svg.png?20230518014357" alt="">
+                                    <li><a href="#"><img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/1600px-Flag_of_Cambodia.svg.png?20230518014357"
+                                                alt="">
                                             Khmer</a></li>
 
                                 </ul>
@@ -51,18 +56,20 @@
                     <div class="header-info header-info-right">
                         @auth
                             <ul>
-                                <li><i class="fi-rs-user"></i> {{Auth::user()->name}}  /
+                                <li><i class="fi-rs-user"></i> {{Auth::user()->name}} /
                                     <form method="POST" action="{{route('logout')}}">
                                         @csrf
-                                        <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                                        <a href="{{route('logout')}}"
+                                           onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
                                     </form>
                                 </li>
                             </ul>
                         @else
-                        <ul>
+                            <ul>
 
-                            <li><i class="fi-rs-key"></i><a href="{{route('login')}}">Log In </a>  / <a href="{{route('register')}}">Sign Up</a></li>
-                        </ul>
+                                <li><i class="fi-rs-key"></i><a href="{{route('login')}}">Log In </a> / <a
+                                        href="{{route('register')}}">Sign Up</a></li>
+                            </ul>
                         @endif
                     </div>
                 </div>
@@ -73,7 +80,9 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png" alt="logo"></a>
+                    <a href="/"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Online_Shop_Logo.svg"
+                            alt="logo"></a>
                 </div>
                 <div class="header-right">
                     @livewire('header-search-component')
@@ -90,91 +99,64 @@
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
                 <div class="logo logo-width-1 d-block d-lg-none">
-                    <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png" alt="logo"></a>
+                    <a href="/"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png"
+                            alt="logo"></a>
                 </div>
                 <div class="header-nav d-none d-lg-flex">
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                         <nav>
                             <ul>
                                 <li><a class="active" href="/">Home </a></li>
-                                <li><a href="">About</a></li>
+{{--                                <li><a href="">About</a></li>--}}
                                 <li><a href="{{route('shop')}}">Shop</a></li>
-                                <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>
-                                </li>
-                                <li><a href="">Blog </a></li>
-                                <li><a href="">Contact</a></li>
+{{--                                <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>--}}
+{{--                                </li>--}}
+{{--                                <li><a href="">Blog </a></li>--}}
+{{--                                <li><a href="">Contact</a></li>--}}
                                 @auth
-                                <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
+                                    <li>
+                                        <a href="#">My Account<i class="fi-rs-angle-down"></i></a>
                                         @if(Auth::user()->utype == 'ADM')
-                                    <ul class="sub-menu">
-                                        <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                        <li><a href="{{route('admin.products')}}">Products</a></li>
-                                        <li><a href="{{route('admin.categories')}}">Categories</a></li>
-                                        <li><a href="#">Coupons</a></li>
-                                        <li><a href="#">Orders</a></li>
-                                        <li><a href="#">Customers</a></li>
-                                    </ul>
-                                    @else
                                             <ul class="sub-menu">
-                                                <li><a href="{{route('user.dashboard')}}">Dashboard</a></li>
+                                                <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                                                <li><a href="{{ route('admin.products') }}">Products</a></li>
+                                                <li><a href="{{ route('admin.categories') }}">Categories</a></li>
+                                                <li><a href="#">Coupons</a></li>
+                                                <li><a href="#">Orders</a></li>
+                                                <li><a href="#">Customers</a></li>
                                             </ul>
+                                        @elseif(Auth::user()->utype == 'SELL')
+                                            <ul class="sub-menu">
+                                                <li><a href="{{ route('seller.dashboard') }}">Dashboard</a></li>
+                                                <li><a href="{{route('seller.product')}}">Products</a></li>
+                                            </ul>
+                                        @else {{-- Add this else block --}}
+                                        <ul class="sub-menu">
+                                            <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                        </ul>
                                         @endif
-                                </li>
-                                @endif
+                                    </li>
+                                @endauth
+
                             </ul>
 
                         </nav>
                     </div>
                 </div>
+                <!--<div class="hotline d-none d-lg-block">-->
+                <!--    <p><i class="fi-rs-smartphone"></i><span>Device Plaza</span> (+885) 0000-000-000 </p>-->
+                <!--</div>-->
                 <div class="hotline d-none d-lg-block">
-                    <p><i class="fi-rs-smartphone"></i><span>Device Plaza</span> (+885) 0000-000-000 </p>
+                    <p>
+                        <img src="{{asset('assets/imgs/slider/florid-crypto-wallet-and-online-banking (1).gif')}}" height="80px" alt="logo">
+                        <span>Device Plaza</span> (+885) 060 896 949</p>
                 </div>
-                <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
+{{--                <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>--}}
                 <div class="header-action-right d-block d-lg-none">
                     <div class="header-action-2">
-                        
                         <div class="header-action-icon-2">
-                            <a class="mini-cart-icon" href="{{route('shop.cart')}}">
-                                <img alt="Device plaza" src="assets/imgs/theme/icons/icon-cart.svg">
-                                
-                            <div class="cart-dropdown-wrap cart-dropdown-hm2">
-                                <ul>
-                                    <li>
-                                        <div class="shopping-cart-img">
-                                            <a href="product-details.html"><img alt="Surfside Media" src="assets/imgs/shop/thumbnail-3.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h4><a href="product-details.html">Plain Striola Shirts</a></h4>
-                                            <h3><span>1 × </span>$800.00</h3>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="shopping-cart-img">
-                                            <a href="product-details.html"><img alt="Surfside Media" src="assets/imgs/shop/thumbnail-4.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h4><a href="product-details.html">Macbook Pro 2022</a></h4>
-                                            <h3><span>1 × </span>$3500.00</h3>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shopping-cart-footer">
-                                    <div class="shopping-cart-total">
-                                        <h4>Total <span>$383.00</span></h4>
-                                    </div>
-                                    <div class="shopping-cart-button">
-                                        <a href="{{route('shop.cart')}}">View cart</a>
-                                        <a href="{{route('shop.checkout')}}">Checkout</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @livewire('cart-icon-component')
                         <div class="header-action-icon-2 d-block d-lg-none">
                             <div class="burger-icon burger-icon-white">
                                 <span class="burger-icon-top"></span>
@@ -192,7 +174,9 @@
     <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-top">
             <div class="mobile-header-logo">
-                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png" alt="logo"></a>
+                <a href=""><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Online_Shop_Logo.svg"
+                        alt="logo"></a>
             </div>
             <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                 <button class="close-style search-close">
@@ -213,7 +197,8 @@
                 <nav>
                     <ul class="mobile-menu">
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a href="/">Home</a></li>
-                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{route('shop')}}">shop</a></li>
+                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{route('shop')}}">shop</a>
+                        </li>
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a href="/">Blog</a></li>
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a href="/">Language</a>
                             <ul class="dropdown">
@@ -261,20 +246,21 @@
                 <div class="col-lg-7 mb-md-3 mb-lg-0">
                     <div class="row align-items-center">
                         <div class="col flex-horizontal-center">
-                            <img class="icon-email" src="{{asset('assets/imgs/theme/icons/icon-email.svg')}}" alt="">
-                            <h4 class="font-size-20 mb-0 ml-3">Sign up to Newsletter</h4>
+{{--                            <img class="icon-email" src="{{asset('assets/imgs/theme/icons/icon-email.svg')}}" alt="">--}}
+{{--                            <h4 class="font-size-20 mb-0 ml-3">Sign up to Newsletter</h4>--}}
                         </div>
                         <div class="col my-4 my-md-0 des">
-                            <h5 class="font-size-15 ml-4 mb-0">...and receive <strong>$25 coupon for first shopping.</strong></h5>
+{{--                            <h5 class="font-size-15 ml-4 mb-0">...and receive <strong>$25 coupon for first--}}
+{{--                                    shopping.</strong></h5>--}}
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <!-- Subscribe Form -->
-                    <form class="form-subcriber d-flex wow fadeIn animated">
-                        <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
-                        <button class="btn bg-dark text-white" type="submit">Subscribe</button>
-                    </form>
+{{--                    <form class="form-subcriber d-flex wow fadeIn animated">--}}
+{{--                        <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">--}}
+{{--                        <button class="btn bg-dark text-white" type="submit">Subscribe</button>--}}
+{{--                    </form>--}}
                     <!-- End Subscribe Form -->
                 </div>
             </div>
@@ -286,7 +272,9 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="widget-about font-md mb-md-5 mb-lg-0">
                         <div class="logo logo-width-1 wow fadeIn animated">
-                            <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png" alt="logo"></a>
+                            <a href=""><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Online_Shop_Logo.svg"
+                                    alt="logo"></a>
                         </div>
                         <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Contact</h5>
                         <p class="wow fadeIn animated">
@@ -300,59 +288,96 @@
                         </p>
                         <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                         <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
-                            <a href="#"><svg width="30" height="30" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="40" cy="40" r="35" fill="url(#paint0_linear)" />
-                                    <path d="M53.0343 50.7039L54.589 40.8252H44.863V34.4175C44.863 31.7143 46.2192 29.0777 50.5754 29.0777H55V20.6675C55 20.6675 50.9863 20 47.1507 20C39.1371 20 33.9042 24.7323 33.9042 33.2961V40.8252H25V50.7039H33.9042V74.5862C35.6918 74.8599 37.5206 75 39.3836 75C41.2466 75 43.0754 74.8599 44.863 74.5862V50.7039H53.0343Z" fill="white" />
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 80 80" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="40" cy="40" r="35" fill="url(#paint0_linear)"/>
+                                    <path
+                                        d="M53.0343 50.7039L54.589 40.8252H44.863V34.4175C44.863 31.7143 46.2192 29.0777 50.5754 29.0777H55V20.6675C55 20.6675 50.9863 20 47.1507 20C39.1371 20 33.9042 24.7323 33.9042 33.2961V40.8252H25V50.7039H33.9042V74.5862C35.6918 74.8599 37.5206 75 39.3836 75C41.2466 75 43.0754 74.8599 44.863 74.5862V50.7039H53.0343Z"
+                                        fill="white"/>
                                     <defs>
-                                        <linearGradient id="paint0_linear" x1="40" y1="5" x2="40" y2="74.7924" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#18ACFE" />
-                                            <stop offset="1" stop-color="#0163E0" />
+                                        <linearGradient id="paint0_linear" x1="40" y1="5" x2="40" y2="74.7924"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#18ACFE"/>
+                                            <stop offset="1" stop-color="#0163E0"/>
                                         </linearGradient>
                                     </defs>
-                                </svg></a>
-                            <a href="#"><svg width="30" height="30" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M29.4719 70C21.3844 70 13.8454 67.6477 7.5 63.589C12.8875 63.9377 22.3952 63.1028 28.3089 57.462C19.4127 57.0538 15.4007 50.2307 14.8773 47.3149C15.6332 47.6065 19.2383 47.9564 21.2733 47.14C11.0397 44.574 9.46982 35.5933 9.81869 32.8524C11.7375 34.1937 14.9936 34.6602 16.2728 34.5436C6.73698 27.7206 10.1676 17.4569 11.8538 15.2409C18.6971 24.7217 28.953 30.0464 41.6409 30.3426C41.4017 29.2934 41.2754 28.2011 41.2754 27.0791C41.2754 19.0273 47.7835 12.5 55.8117 12.5C60.0064 12.5 63.786 14.2819 66.4392 17.1321C69.2423 16.4753 73.4608 14.9377 75.5231 13.608C74.4836 17.3403 71.2473 20.4537 69.2897 21.6077C69.306 21.6469 69.2738 21.5683 69.2897 21.6077C71.0093 21.3476 75.662 20.4534 77.5 19.2064C76.591 21.3031 73.16 24.7893 70.3443 26.7411C70.8682 49.8451 53.1912 70 29.4719 70Z" fill="#47ACDF" />
-                                </svg></a>
-                            <a href="#"><svg width="30" height="30" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="5" y="5" width="70" height="70" rx="15" fill="url(#paint0_radial)" />
-                                    <rect x="5" y="5" width="70" height="70" rx="15" fill="url(#paint1_radial)" />
-                                    <rect x="5" y="5" width="70" height="70" rx="15" fill="url(#paint2_radial)" />
-                                    <path d="M57.5 26.25C57.5 28.3211 55.8211 30 53.75 30C51.6789 30 50 28.3211 50 26.25C50 24.1789 51.6789 22.5 53.75 22.5C55.8211 22.5 57.5 24.1789 57.5 26.25Z" fill="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40 52.5C46.9036 52.5 52.5 46.9036 52.5 40C52.5 33.0964 46.9036 27.5 40 27.5C33.0964 27.5 27.5 33.0964 27.5 40C27.5 46.9036 33.0964 52.5 40 52.5ZM40 47.5C44.1421 47.5 47.5 44.1421 47.5 40C47.5 35.8579 44.1421 32.5 40 32.5C35.8579 32.5 32.5 35.8579 32.5 40C32.5 44.1421 35.8579 47.5 40 47.5Z" fill="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 39C15 30.5992 15 26.3988 16.6349 23.1901C18.073 20.3677 20.3677 18.073 23.1901 16.6349C26.3988 15 30.5992 15 39 15H41C49.4008 15 53.6012 15 56.8099 16.6349C59.6323 18.073 61.927 20.3677 63.3651 23.1901C65 26.3988 65 30.5992 65 39V41C65 49.4008 65 53.6012 63.3651 56.8099C61.927 59.6323 59.6323 61.927 56.8099 63.3651C53.6012 65 49.4008 65 41 65H39C30.5992 65 26.3988 65 23.1901 63.3651C20.3677 61.927 18.073 59.6323 16.6349 56.8099C15 53.6012 15 49.4008 15 41V39ZM39 20H41C45.2829 20 48.1944 20.0039 50.4448 20.1878C52.6369 20.3669 53.7579 20.6915 54.5399 21.0899C56.4215 22.0487 57.9513 23.5785 58.9101 25.4601C59.3085 26.2421 59.6331 27.3631 59.8122 29.5552C59.9961 31.8056 60 34.7171 60 39V41C60 45.2829 59.9961 48.1944 59.8122 50.4448C59.6331 52.6369 59.3085 53.7579 58.9101 54.5399C57.9513 56.4215 56.4215 57.9513 54.5399 58.9101C53.7579 59.3085 52.6369 59.6331 50.4448 59.8122C48.1944 59.9961 45.2829 60 41 60H39C34.7171 60 31.8056 59.9961 29.5552 59.8122C27.3631 59.6331 26.2421 59.3085 25.4601 58.9101C23.5785 57.9513 22.0487 56.4215 21.0899 54.5399C20.6915 53.7579 20.3669 52.6369 20.1878 50.4448C20.0039 48.1944 20 45.2829 20 41V39C20 34.7171 20.0039 31.8056 20.1878 29.5552C20.3669 27.3631 20.6915 26.2421 21.0899 25.4601C22.0487 23.5785 23.5785 22.0487 25.4601 21.0899C26.2421 20.6915 27.3631 20.3669 29.5552 20.1878C31.8056 20.0039 34.7171 20 39 20Z" fill="white" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 80 80" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M29.4719 70C21.3844 70 13.8454 67.6477 7.5 63.589C12.8875 63.9377 22.3952 63.1028 28.3089 57.462C19.4127 57.0538 15.4007 50.2307 14.8773 47.3149C15.6332 47.6065 19.2383 47.9564 21.2733 47.14C11.0397 44.574 9.46982 35.5933 9.81869 32.8524C11.7375 34.1937 14.9936 34.6602 16.2728 34.5436C6.73698 27.7206 10.1676 17.4569 11.8538 15.2409C18.6971 24.7217 28.953 30.0464 41.6409 30.3426C41.4017 29.2934 41.2754 28.2011 41.2754 27.0791C41.2754 19.0273 47.7835 12.5 55.8117 12.5C60.0064 12.5 63.786 14.2819 66.4392 17.1321C69.2423 16.4753 73.4608 14.9377 75.5231 13.608C74.4836 17.3403 71.2473 20.4537 69.2897 21.6077C69.306 21.6469 69.2738 21.5683 69.2897 21.6077C71.0093 21.3476 75.662 20.4534 77.5 19.2064C76.591 21.3031 73.16 24.7893 70.3443 26.7411C70.8682 49.8451 53.1912 70 29.4719 70Z"
+                                        fill="#47ACDF"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 80 80" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="5" width="70" height="70" rx="15" fill="url(#paint0_radial)"/>
+                                    <rect x="5" y="5" width="70" height="70" rx="15" fill="url(#paint1_radial)"/>
+                                    <rect x="5" y="5" width="70" height="70" rx="15" fill="url(#paint2_radial)"/>
+                                    <path
+                                        d="M57.5 26.25C57.5 28.3211 55.8211 30 53.75 30C51.6789 30 50 28.3211 50 26.25C50 24.1789 51.6789 22.5 53.75 22.5C55.8211 22.5 57.5 24.1789 57.5 26.25Z"
+                                        fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M40 52.5C46.9036 52.5 52.5 46.9036 52.5 40C52.5 33.0964 46.9036 27.5 40 27.5C33.0964 27.5 27.5 33.0964 27.5 40C27.5 46.9036 33.0964 52.5 40 52.5ZM40 47.5C44.1421 47.5 47.5 44.1421 47.5 40C47.5 35.8579 44.1421 32.5 40 32.5C35.8579 32.5 32.5 35.8579 32.5 40C32.5 44.1421 35.8579 47.5 40 47.5Z"
+                                          fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M15 39C15 30.5992 15 26.3988 16.6349 23.1901C18.073 20.3677 20.3677 18.073 23.1901 16.6349C26.3988 15 30.5992 15 39 15H41C49.4008 15 53.6012 15 56.8099 16.6349C59.6323 18.073 61.927 20.3677 63.3651 23.1901C65 26.3988 65 30.5992 65 39V41C65 49.4008 65 53.6012 63.3651 56.8099C61.927 59.6323 59.6323 61.927 56.8099 63.3651C53.6012 65 49.4008 65 41 65H39C30.5992 65 26.3988 65 23.1901 63.3651C20.3677 61.927 18.073 59.6323 16.6349 56.8099C15 53.6012 15 49.4008 15 41V39ZM39 20H41C45.2829 20 48.1944 20.0039 50.4448 20.1878C52.6369 20.3669 53.7579 20.6915 54.5399 21.0899C56.4215 22.0487 57.9513 23.5785 58.9101 25.4601C59.3085 26.2421 59.6331 27.3631 59.8122 29.5552C59.9961 31.8056 60 34.7171 60 39V41C60 45.2829 59.9961 48.1944 59.8122 50.4448C59.6331 52.6369 59.3085 53.7579 58.9101 54.5399C57.9513 56.4215 56.4215 57.9513 54.5399 58.9101C53.7579 59.3085 52.6369 59.6331 50.4448 59.8122C48.1944 59.9961 45.2829 60 41 60H39C34.7171 60 31.8056 59.9961 29.5552 59.8122C27.3631 59.6331 26.2421 59.3085 25.4601 58.9101C23.5785 57.9513 22.0487 56.4215 21.0899 54.5399C20.6915 53.7579 20.3669 52.6369 20.1878 50.4448C20.0039 48.1944 20 45.2829 20 41V39C20 34.7171 20.0039 31.8056 20.1878 29.5552C20.3669 27.3631 20.6915 26.2421 21.0899 25.4601C22.0487 23.5785 23.5785 22.0487 25.4601 21.0899C26.2421 20.6915 27.3631 20.3669 29.5552 20.1878C31.8056 20.0039 34.7171 20 39 20Z"
+                                          fill="white"/>
                                     <defs>
-                                        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 57.5) rotate(-55.3758) scale(63.799)">
-                                            <stop stop-color="#B13589" />
-                                            <stop offset="0.79309" stop-color="#C62F94" />
-                                            <stop offset="1" stop-color="#8A3AC8" />
+                                        <radialGradient id="paint0_radial" cx="0" cy="0" r="1"
+                                                        gradientUnits="userSpaceOnUse"
+                                                        gradientTransform="translate(30 57.5) rotate(-55.3758) scale(63.799)">
+                                            <stop stop-color="#B13589"/>
+                                            <stop offset="0.79309" stop-color="#C62F94"/>
+                                            <stop offset="1" stop-color="#8A3AC8"/>
                                         </radialGradient>
-                                        <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(27.5 77.5) rotate(-65.1363) scale(56.4856)">
-                                            <stop stop-color="#E0E8B7" />
-                                            <stop offset="0.444662" stop-color="#FB8A2E" />
-                                            <stop offset="0.71474" stop-color="#E2425C" />
-                                            <stop offset="1" stop-color="#E2425C" stop-opacity="0" />
+                                        <radialGradient id="paint1_radial" cx="0" cy="0" r="1"
+                                                        gradientUnits="userSpaceOnUse"
+                                                        gradientTransform="translate(27.5 77.5) rotate(-65.1363) scale(56.4856)">
+                                            <stop stop-color="#E0E8B7"/>
+                                            <stop offset="0.444662" stop-color="#FB8A2E"/>
+                                            <stop offset="0.71474" stop-color="#E2425C"/>
+                                            <stop offset="1" stop-color="#E2425C" stop-opacity="0"/>
                                         </radialGradient>
-                                        <radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.25 7.5) rotate(-8.1301) scale(97.2272 20.7959)">
-                                            <stop offset="0.156701" stop-color="#406ADC" />
-                                            <stop offset="0.467799" stop-color="#6A45BE" />
-                                            <stop offset="1" stop-color="#6A45BE" stop-opacity="0" />
+                                        <radialGradient id="paint2_radial" cx="0" cy="0" r="1"
+                                                        gradientUnits="userSpaceOnUse"
+                                                        gradientTransform="translate(1.25 7.5) rotate(-8.1301) scale(97.2272 20.7959)">
+                                            <stop offset="0.156701" stop-color="#406ADC"/>
+                                            <stop offset="0.467799" stop-color="#6A45BE"/>
+                                            <stop offset="1" stop-color="#6A45BE" stop-opacity="0"/>
                                         </radialGradient>
                                     </defs>
-                                </svg></a>
-                            <a href="#"><svg width="30" height="30" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="40" cy="40" r="35" fill="white" />
-                                    <path d="M40 75C59.33 75 75 59.33 75 40C75 20.67 59.33 5 40 5C20.67 5 5 20.67 5 40C5 54.2003 13.4567 66.4254 25.6087 71.9138C25.625 71.5352 25.6434 71.188 25.6591 70.8902C25.6805 70.4844 25.6971 70.1705 25.6971 69.994C25.6971 68.9423 26.4123 63.7259 26.4123 63.7259L30.7873 45.7632C30.1142 44.6694 29.6094 42.3557 29.6094 40.5889C29.6094 32.4279 34.1527 30.661 36.9291 30.661C40.4627 30.661 41.262 34.4892 41.262 37.3077C41.262 38.7985 40.4887 41.1321 39.6929 43.5335C38.8494 46.0786 37.9808 48.6999 37.9808 50.4747C37.9808 53.9243 41.3882 55.649 43.744 55.649C49.97 55.649 55.6911 47.8245 55.6911 40C55.6911 32.1755 52.0313 22.7103 40.0421 22.7103C28.0529 22.7103 22.6683 31.8389 22.6683 38.8221C22.6683 43.5336 24.4351 46.9831 25.3185 47.5721C25.5709 47.7964 26 48.4892 25.6971 49.4651C25.3942 50.4411 24.8418 52.6202 24.6034 53.5877C24.5753 53.8121 24.3089 54.1935 23.4676 53.9243C22.4159 53.5877 15.7272 49.381 15.7272 38.8221C15.7272 28.2632 24.0144 15.9795 40.0421 15.9795C56.0697 15.9795 64.2728 26.7488 64.2728 40C64.2728 53.2512 53.5457 61.7067 45.3846 61.7067C38.8558 61.7067 36.2981 58.79 35.8353 57.3317L33.3534 66.7968C32.7673 68.3671 31.6741 71.1894 30.3259 73.6459C33.3984 74.5277 36.644 75 40 75Z" fill="#BB0F23" />
-                                </svg></a>
-                            <a href="#"><svg width="30" height="30" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="40" cy="40" r="35" fill="url(#paint0_linear)" />
-                                    <path d="M57.4664 25.522C57.7781 23.5083 55.8635 21.9189 54.0731 22.705L18.412 38.3621C17.1281 38.9258 17.222 40.8706 18.5537 41.2947L25.9079 43.6367C27.3115 44.0837 28.8313 43.8526 30.057 43.0058L46.6374 31.5507C47.1374 31.2052 47.6824 31.9162 47.2552 32.3566L35.3203 44.6616C34.1625 45.8553 34.3923 47.8779 35.7849 48.7512L49.1474 57.1307C50.6461 58.0706 52.5742 57.1264 52.8545 55.3154L57.4664 25.522Z" fill="white" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 80 80" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="40" cy="40" r="35" fill="white"/>
+                                    <path
+                                        d="M40 75C59.33 75 75 59.33 75 40C75 20.67 59.33 5 40 5C20.67 5 5 20.67 5 40C5 54.2003 13.4567 66.4254 25.6087 71.9138C25.625 71.5352 25.6434 71.188 25.6591 70.8902C25.6805 70.4844 25.6971 70.1705 25.6971 69.994C25.6971 68.9423 26.4123 63.7259 26.4123 63.7259L30.7873 45.7632C30.1142 44.6694 29.6094 42.3557 29.6094 40.5889C29.6094 32.4279 34.1527 30.661 36.9291 30.661C40.4627 30.661 41.262 34.4892 41.262 37.3077C41.262 38.7985 40.4887 41.1321 39.6929 43.5335C38.8494 46.0786 37.9808 48.6999 37.9808 50.4747C37.9808 53.9243 41.3882 55.649 43.744 55.649C49.97 55.649 55.6911 47.8245 55.6911 40C55.6911 32.1755 52.0313 22.7103 40.0421 22.7103C28.0529 22.7103 22.6683 31.8389 22.6683 38.8221C22.6683 43.5336 24.4351 46.9831 25.3185 47.5721C25.5709 47.7964 26 48.4892 25.6971 49.4651C25.3942 50.4411 24.8418 52.6202 24.6034 53.5877C24.5753 53.8121 24.3089 54.1935 23.4676 53.9243C22.4159 53.5877 15.7272 49.381 15.7272 38.8221C15.7272 28.2632 24.0144 15.9795 40.0421 15.9795C56.0697 15.9795 64.2728 26.7488 64.2728 40C64.2728 53.2512 53.5457 61.7067 45.3846 61.7067C38.8558 61.7067 36.2981 58.79 35.8353 57.3317L33.3534 66.7968C32.7673 68.3671 31.6741 71.1894 30.3259 73.6459C33.3984 74.5277 36.644 75 40 75Z"
+                                        fill="#BB0F23"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 80 80" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="40" cy="40" r="35" fill="url(#paint0_linear)"/>
+                                    <path
+                                        d="M57.4664 25.522C57.7781 23.5083 55.8635 21.9189 54.0731 22.705L18.412 38.3621C17.1281 38.9258 17.222 40.8706 18.5537 41.2947L25.9079 43.6367C27.3115 44.0837 28.8313 43.8526 30.057 43.0058L46.6374 31.5507C47.1374 31.2052 47.6824 31.9162 47.2552 32.3566L35.3203 44.6616C34.1625 45.8553 34.3923 47.8779 35.7849 48.7512L49.1474 57.1307C50.6461 58.0706 52.5742 57.1264 52.8545 55.3154L57.4664 25.522Z"
+                                        fill="white"/>
                                     <defs>
-                                        <linearGradient id="paint0_linear" x1="40" y1="5" x2="40" y2="75" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#37BBFE" />
-                                            <stop offset="1" stop-color="#007DBB" />
+                                        <linearGradient id="paint0_linear" x1="40" y1="5" x2="40" y2="75"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#37BBFE"/>
+                                            <stop offset="1" stop-color="#007DBB"/>
                                         </linearGradient>
                                     </defs>
-                                </svg></a>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -369,7 +394,7 @@
                 <div class="col-lg-2  col-md-3">
                     <h5 class="widget-title wow fadeIn animated">My Account</h5>
                     <ul class="footer-list wow fadeIn animated">
-                        <li><a href="my-account.html">My Account</a></li>
+                        <li><a href="#">My Account</a></li>
                         <li><a href="#">View Cart</a></li>
                         <li><a href="#">My Wishlist</a></li>
                         <li><a href="#">Track My Order</a></li>
@@ -382,13 +407,17 @@
                         <div class="col-md-8 col-lg-12">
                             <p class="wow fadeIn animated">From App Store or Google Play</p>
                             <div class="download-app wow fadeIn animated mob-app">
-                                <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active" src="{{asset('assets/imgs/theme/app-store.jpg')}}" alt=""></a>
-                                <a href="#" class="hover-up"><img src="{{asset('assets/imgs/theme/google-play.jpg')}}" alt=""></a>
+                                <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active"
+                                                                                  src="{{asset('assets/imgs/theme/app-store.jpg')}}"
+                                                                                  alt=""></a>
+                                <a href="#" class="hover-up"><img src="{{asset('assets/imgs/theme/google-play.jpg')}}"
+                                                                  alt=""></a>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-12 mt-md-3 mt-lg-0">
                             <p class="mb-20 wow fadeIn animated">Secured Payment Gateways</p>
-                            <img class="wow fadeIn animated" src="{{asset('assets/imgs/theme/payment-method.png')}}" alt="">
+                            <img class="wow fadeIn animated" src="{{asset('assets/imgs/theme/payment-method.png')}}"
+                                 alt="">
                         </div>
                     </div>
                 </div>
@@ -402,7 +431,7 @@
             </div>
             <div class="col-lg-6">
                 <p class="float-md-left font-sm text-muted mb-0">
-                    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
                 </p>
             </div>
             <div class="col-lg-6">
@@ -415,7 +444,7 @@
 </footer>
 <!-- Vendor JS-->
 {{--<script src="{{ asset('js/alpine.js') }}"></script>--}}
-{{--<script src="{{ asset('js/livewire.js') }}"></script>--}}
+<script src="{{ asset('js/livewire.js') }}"></script>
 <script src="{{asset('assets/js/vendor/modernizr-3.6.0.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery-migrate-3.3.0.min.js')}}"></script>
@@ -439,6 +468,9 @@
 <!-- Template  JS -->
 <script src="{{asset('assets/js/main.js?v=3.3')}}"></script>
 <script src="{{asset('assets/js/shop.js?v=3.3')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
 {{--<script src="{{ mix('js/app.js') }}"></script>--}}
 @livewireScripts
 </body>
