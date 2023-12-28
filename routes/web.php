@@ -59,18 +59,11 @@ Route::middleware(['auth','\App\Http\Middleware\AuthAdmin'])->group(function (){
 
 });
 
-
-
 Route::middleware('auth','\App\Http\Middleware\AuthSeller')->group(function (){
     Route::get('/seller/dashboard',SellerDashboardComponent::class)->name('seller.dashboard');
     Route::get('/seller/product/add',SellerAddProductComponent::class)->name('seller.product.add');
     Route::get('/seller/product',SellerProductComponent::class)->name('seller.product');
 });
-
-
-
-
-
 
 Route::get('/',HomeComponent::class)->name('home.index');
 Route::get('/shop',ShopComponent::class)->name('shop');
