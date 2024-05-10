@@ -8,21 +8,21 @@
                         <div class="row align-items-center slider-animated-1">
                             <div class="col-lg-5 col-md-6">
                                 <div class="hero-slider-content-2">
-                                    <h4 class="animated">Trade-in offer</h4>
-                                    <h2 class="animated fw-900">Supper value deals</h2>
-                                    <h1 class="animated fw-900 text-brand">On all products</h1>
-                                    <p class="animated">Save more with coupons & up to 70% off</p>
-                                    <a class="animated btn btn-brush btn-brush-3" href="{{route('shop')}}"> Shop Now </a>
+                                    <!-- <h4 class="animated">Trade-in offer</h4> -->
+                                    <h3 class="animated fw-900">Travel makes one modest.</h3>
+                                    <h3 class="animated fw-900 text-brand">You see what a tiny place you occupy in
+                                        the world.</h3>
+                                    <!-- <p class="animated"></p> -->
+                                    <a class="animated btn btn-brush btn-brush-3" href="{{route('place')}}">
+                                        Visit
+                                        Now </a>
                                 </div>
                             </div>
-                            <!--<div class="col-lg-7 col-md-6">-->
-                            <!--    <div class="single-slider-img single-slider-img-1">-->
-                            <!--       <img class="animated slider-1-1" src="{{asset('assets/imgs/slider/slider-1.png')}}" alt="">-->
-                            <!--    </div>-->
-                            <!--</div>-->
                             <div class="col-lg-7 col-md-6">
                                 <div class="single-slider-img single-slider-img-1 ">
-                                    <img class="animated slider-1-1" src="{{asset('assets/imgs/slider/beam-cryptocurrency-analytics-and-trading-on-laptop-screen (1).gif')}}" alt="" >
+                                    <img class="animated slider-1-1"
+                                         src="https://img.freepik.com/free-vector/man-woman-choosing-travel-destination-going-holiday-vacation_335657-2455.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1707091200&semt=ais"
+                                         alt="">
                                 </div>
                             </div>
                         </div>
@@ -33,21 +33,19 @@
                         <div class="row align-items-center slider-animated-1">
                             <div class="col-lg-5 col-md-6">
                                 <div class="hero-slider-content-2">
-                                    <h4 class="animated">Hot promotions</h4>
-                                    <h2 class="animated fw-900">Device Trending</h2>
-                                    <h1 class="animated fw-900 text-7">Great Collection</h1>
-                                    <p class="animated">Save more with coupons & up to 20% off</p>
-                                    <a class="animated btn btn-brush btn-brush-2" href="{{route('shop')}}"> Shop Now </a>
+                                    <!-- <h4 class="animated">Hot promotions</h4> -->
+                                    <h3 class="animated fw-900">The Most Beautiful Thing In Cambodia </h3>
+                                    <h3 class="animated fw-900 text-7">Isn’t The Country – It’s The Cambodian
+                                        People.</h3>
+                                    <!-- <p class="animated">Save more with coupons & up to 20% off</p> -->
+                                    <a class="animated btn btn-brush btn-brush-2" href="{{route('place')}}"> Visit
+                                        Now </a>
                                 </div>
                             </div>
-                            <!--<div class="col-lg-7 col-md-6">-->
-                            <!--    <div class="single-slider-img single-slider-img-1">-->
-                            <!--        <img class="animated slider-1-1" src="{{asset('assets/imgs/slider/slider-2.png')}}" alt="">-->
-                            <!--    </div>-->
-                            <!--</div>-->
                             <div class="col-lg-7 col-md-6">
                                 <div class="single-slider-img single-slider-img-1">
-                                    <img class="animated slider-1-2" src="{{asset('assets/imgs/slider/beam-analytics (1).gif')}}" alt="">
+                                    <img class="animated slider-1-2 "
+                                         src="{{asset('assets/imgs/banner/a.jpeg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -58,41 +56,49 @@
         </section>
         <section class="featured section-padding position-relative">
             <div class="container">
-               <div class="row">
+                <div class="row">
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
                         <div class="banner-features wow fadeIn animated hover-up">
-                            <img src="{{asset('assets/imgs/theme/icons/pablo-866.svg')}}" height="120"alt="">
-                            <h4 class="bg-1">Free Shipping</h4>
+                            <img src="{{asset('assets/imgs/theme/icons/pablo-866.svg')}}" height="120" alt="">
+                            <h4 class="bg-1">Work</h4>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
                         <div class="banner-features wow fadeIn animated hover-up">
-                            <img src="{{asset('assets/imgs/theme/icons/juicy-lettering-order-today-with-a-girl-who-orders-online.svg')}}" height="120" alt="">
-                            <h4 class="bg-3">Online Order</h4>
+                            <img
+                                src="https://global-uploads.webflow.com/5e3ce2ec7f6e53c045fe7cfa/6346cff779787b3be4a2055c_Airport%20Arrival.png"
+                                height="120" alt="">
+                            <h4 class="bg-3">Travel</h4>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
                         <div class="banner-features wow fadeIn animated hover-up">
-                            <img src="{{asset('assets/imgs/theme/icons/marginalia-savings-1.svg')}}" height="120" alt="">
+                            <img src="{{asset('assets/imgs/theme/icons/marginalia-savings-1.svg')}}" height="120"
+                                 alt="">
                             <h4 class="bg-2">Save Money</h4>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
                         <div class="banner-features wow fadeIn animated hover-up">
-                            <img src="{{asset('assets/imgs/theme/icons/sammy-lettering-holiday-sale-with-browser-and-gift-boxes.svg')}}" height="120" alt="">
-                            <h4 class="bg-4">Promotions</h4>
+                            <img
+                                src="https://www.graphicpear.com/wp-content/uploads/2022/11/Passport-Travel-Illustration-1.jpg"
+                                height="120" alt="">
+                            <h4 class="bg-4">Repeat</h4>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
                         <div class="banner-features wow fadeIn animated hover-up">
-                            <img src="{{asset('assets/imgs/theme/icons/juicy-lettering-happy-holidays-with-woman-looking-at-christmas-decorations.svg')}}" height="120" alt="">
-                            <h4 class="bg-5">Happy Sell</h4>
+                            <img
+                                src="https://img.freepik.com/free-vector/exploring-concept-illustration_114360-958.jpg"
+                                height="120" alt="">
+                            <h4 class="bg-5">Explore</h4>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
                         <div class="banner-features wow fadeIn animated hover-up">
-                            <img src="{{asset('assets/imgs/theme/icons/florid-support-service.svg')}}" height="120" alt="">
-                            <h4 class="bg-6">24/7 Support</h4>
+                            <img src="{{asset('assets/imgs/theme/icons/florid-support-service.svg')}}" height="120"
+                                 alt="">
+                            <h4 class="bg-6">See the world</h4>
                         </div>
                     </div>
                 </div>
@@ -104,55 +110,42 @@
                 <div class="tab-header">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="nav-tab-one" data-bs-toggle="tab" data-bs-target="#tab-one" type="button" role="tab" aria-controls="tab-one" aria-selected="true">Featured</button>
+                            <button class="nav-link active" id="nav-tab-one" data-bs-toggle="tab"
+                                    data-bs-target="#tab-one" type="button" role="tab" aria-controls="tab-one"
+                                    aria-selected="true">Most Visited
+                            </button>
                         </li>
-                        <!--<li class="nav-item" role="presentation">-->
-                        <!--    <button class="nav-link" id="nav-tab-two" data-bs-toggle="tab" data-bs-target="#tab-two" type="button" role="tab" aria-controls="tab-two" aria-selected="false">Popular</button>-->
-                        <!--</li>-->
-                        <!--<li class="nav-item" role="presentation">-->
-                        <!--    <button class="nav-link" id="nav-tab-three" data-bs-toggle="tab" data-bs-target="#tab-three" type="button" role="tab" aria-controls="tab-three" aria-selected="false">New added</button>-->
-                        <!--</li>-->
+
                     </ul>
-                    <a href="{{route('shop')}}" class="view-more d-none d-md-flex">View More<i class="fi-rs-angle-double-small-right"></i></a>
+                    <a href="{{route('place')}}" class="view-more d-none d-md-flex">View More<i
+                            class="fi-rs-angle-double-small-right"></i></a>
                 </div>
                 <!--End nav-tabs-->
                 <div class="tab-content wow fadeIn animated" id="myTabContent">
                     <div class="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one">
                         <div class="row product-grid-4">
-                            @foreach($fproducts as $fproduct)
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 col-6">
-                                <div class="product-cart-wrap mb-30">
-                                    <div class="product-img-action-wrap">
-                                        <div class="product-img product-img-zoom">
-                                            <a href="{{route('product.details',['slug'=>$fproduct->slug])}}">
-                                                <img class="default-img"  src="{{asset('assets/imgs/products')}}/{{$fproduct->image}} " alt="{{$fproduct->name}} ">
-                                               <!-- <img class="hover-img" src="assets/imgs/shop/product-1-2.jpg" alt="">--}} -->
-                                            </a>
+                            @foreach($mostvisit_place as $mostvisit_places)
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 col-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="{{route('place.details',['slug'=>$mostvisit_places->slug])}}">
+                                                    <img class="default-img"
+                                                         src="{{asset('assets/imgs/products')}}/{{$mostvisit_places->image}} "
+                                                         alt="{{$mostvisit_places->name}} ">
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="product-badges product-badges-position product-badges-mrg">
-                                            <span class="hot">Hot</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-wrap">
-                                        <div class="product-category">
-                                            <a href="">Device Plaza</a>
-                                        </div>
-                                        <h2><a href="">{{$fproduct->name}}</a></h2>
-                                        <div class="rating-result" title="90%">
-                                            <span>
-                                                <span></span>
-                                            </span>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>${{$fproduct->regular_price}} </span>
-                                            <span class="old-price">${{$fproduct->sell_price}}</span>
-                                        </div>
-                                        <div class="product-action-1 show">
-                                            <a aria-label="Add To Cart" class="action-btn hover-up" href="" wire:click.prevent="store({{$fproduct->id}},'{{$fproduct->name}}',{{$fproduct->regular_price}})"><i class="fi-rs-shopping-bag-add"></i></a>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+
+                                                <a href="">{{$mostvisit_places->province->name}}</a>
+
+                                            </div>
+                                            <h2><a href="">{{$mostvisit_places->name}}</a></h2>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                         <!--End product-grid-4-->
@@ -164,142 +157,59 @@
         <section class="banner-2 section-padding pb-0">
             <div class="container">
                 <div class="banner-img banner-big wow fadeIn animated f-none">
-                   <img src="{{asset('assets/imgs/Banner2/new.jpg')}}"alt="banner">
-
-                    <div class="banner-text d-md-block d-none">
-{{--                        <h4 class="mb-15 mt-40 text-brand">Repair Services</h4>--}}
-{{--                        <h1 class="fw-600 mb-20">We're an Apple <br>Authorised Service Provider</h1>--}}
-{{--                        <a href="#" class="btn">Learn More <i class="fi-rs-arrow-right"></i></a>--}}
-                    </div>
+                    <img
+                        src="https://img.freepik.com/premium-vector/cambodia-travel-destination-grand-illustration_268722-388.jpg?w=2000"
+                        height="300px" width="100%" alt="banner">
                 </div>
             </div>
         </section>
         <section class="popular-categories section-padding mt-15 mb-25">
             <div class="container wow fadeIn animated">
-                <h3 class="section-title mb-20"><span>Popular</span> Categories</h3>
+                <h3 class="section-title mb-20"><span>Popular</span> Provinces</h3>
                 <div class="carausel-6-columns-cover position-relative">
-                    <div class="slider-arrow slider-arrow-2 carausel-6-columns-arrow" id="carausel-6-columns-arrows"></div>
+                    <div class="slider-arrow slider-arrow-2 carausel-6-columns-arrow"
+                         id="carausel-6-columns-arrows"></div>
                     <div class="carausel-6-columns" id="carausel-6-columns">
-                        @foreach($pcategories as $pcategory)
-                        <div class="card-1">
-                            <figure class=" img-hover-scale overflow-hidden">
-                                <a href="{{route('product.category',['slug'=>$pcategory->name])}}"><img src="{{asset('assets/imgs/categories')}}/{{$pcategory->image}}" alt="{{$pcategory->name}}"></a>
-                            </figure>
-                            <h5><a href="">{{$pcategory->name}}</a></h5>
-                        </div>
+                        @foreach($pouplar_province as $pouplar_provinces)
+                            <div class="card-1">
+                                <figure class=" img-hover-scale overflow-hidden">
+                                    <a href="{{route('place.province',['slug'=>$pouplar_provinces->name])}}"><img
+                                            src="{{asset('assets/imgs/categories')}}/{{$pouplar_provinces->image}}"
+                                            alt="{{$pouplar_provinces->name}}"></a>
+                                </figure>
+                                <h5><a href="">{{$pouplar_provinces->name}}</a></h5>
+                            </div>
                         @endforeach
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="banners mb-15">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="banner-img wow fadeIn animated">
-                            <img src="{{asset('assets/imgs/Banner2/1.png')}}" alt="">
-                            <div class="banner-text">
-{{--                                <span>Smart Offer</span>--}}
-{{--                                <h4>Save 20% on <br>Woman Bag</h4>--}}
-{{--                                <a href="#">Shop Now <i class="fi-rs-arrow-right"></i></a>--}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="banner-img wow fadeIn animated">
-                            <img src="{{asset('assets/imgs/Banner2/2.png')}}" alt="">
-                            <div class="banner-text">
-{{--                                <span>Sale off</span>--}}
-{{--                                <h4>Great Summer <br>Collection</h4>--}}
-{{--                                <a href="#">Shop Now <i class="fi-rs-arrow-right"></i></a>--}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 d-md-none d-lg-flex">
-                        <div class="banner-img wow fadeIn animated  mb-sm-0">
-                            <img src="{{asset('assets/imgs/Banner2/4.jpg')}}" alt="">
-                            <div class="banner-text">
-{{--                                <span>New Arrivals</span>--}}
-{{--                                <h4>Shop Today’s <br>Deals & Offers</h4>--}}
-{{--                                <a href="#">Shop Now <i class="fi-rs-arrow-right"></i></a>--}}
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section-padding">
             <div class="container wow fadeIn animated">
-                <h3 class="section-title mb-20"><span>New</span> Arrivals</h3>
+                <h3 class="section-title mb-20"><span>Recommended</span> Place</h3>
                 <div class="carausel-6-columns-cover position-relative">
-                    <div class="slider-arrow slider-arrow-2 carausel-6-columns-arrow" id="carausel-6-columns-2-arrows"></div>
+                    <div class="slider-arrow slider-arrow-2 carausel-6-columns-arrow"
+                         id="carausel-6-columns-2-arrows"></div>
                     <div class="carausel-6-columns carausel-arrow-center" id="carausel-6-columns-2">
-                        @foreach($lproducts as $lproduct)
-                        <div class="product-cart-wrap small hover-up">
-                            <div class="product-img-action-wrap">
-                                <div class="product-img product-img-zoom">
-                                    <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
-                                        <img class="default-img" src={{asset('assets/imgs/products')}}/{{$lproduct->image}} alt="{{$lproduct->name}}">
-{{--                                        <img class="hover-img" src="assets/imgs/shop/product-2-2.jpg" alt="">--}}
-                                    </a>
+                        @foreach($recommended_place as $recommended_places)
+                            <div class="product-cart-wrap small hover-up">
+                                <div class="product-img-action-wrap">
+                                    <div class="product-img product-img-zoom">
+                                        <a href="{{route('place.details',['slug'=>$recommended_places->slug])}}">
+                                            <img class="default-img"
+                                                 src={{asset('assets/imgs/products')}}/{{$recommended_places->image}} alt="{{$recommended_places->name}}">
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="product-badges product-badges-position product-badges-mrg">
-                                    <span class="new">new</span>
-                                </div>
-                            </div>
-                            <div class="product-content-wrap">
-                                <h2><a href="">{{$lproduct->name}}</a></h2>
-                                <div class="rating-result" title="90%">
-                                    <span>
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span>${{$lproduct->regular_price}} </span>
-                                    <span class="old-price">${{$lproduct->sell_price}}</span>
+                                <div class="product-content-wrap">
+                                    <h2><a href="">{{$recommended_places->name}}</a></h2>
                                 </div>
                             </div>
-                        </div>
-                         @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <h3 class="section-title mb-20 wow fadeIn animated"><span>Featured</span> Brands</h3>
-                <div class="carausel-6-columns-cover position-relative wow fadeIn animated">
-                    <div class="slider-arrow slider-arrow-2 carausel-6-columns-arrow" id="carausel-6-columns-3-arrows"></div>
-                    <div class="carausel-6-columns text-center" id="carausel-6-columns-3">
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/acer.svg')}}" alt="Acer" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/apple.svg')}}" alt="Apple" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/asus.svg')}}" alt="ASUS" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/huawei.svg')}}" alt="Huawei" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/rog.svg')}}" alt="ROG" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/xiaomi.svg')}}" alt="Xiaomi" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/samsung.svg')}}" alt="Samsung" width="80" height="100">
-                        </div>
-                        <div class="brand-logo">
-                            <img class="img-grey-hover" src="{{asset('assets/imgs/Brand/vivo.svg')}}" alt="vivo" width="80" height="100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 </div>
 

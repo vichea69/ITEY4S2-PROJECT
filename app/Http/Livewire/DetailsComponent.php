@@ -2,30 +2,26 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Category;
-use App\Models\Product;
+use App\Models\Place;
+use App\Models\Province;
 use Livewire\Component;
-use Gloudemans\Shoppingcart\Facades\Cart;
 
 class DetailsComponent extends Component
 {
     public $slug;
-    public function mount($slug){
-        $this->slug =$slug;
-    }
-    public function store($product_id, $product_name, $product_price){
-        Cart::add($product_id, $product_name,1, $product_price)->associate('\App\Models\Product');
-        session()->flash('success message', 'Item added to Cart');
-        return redirect()->route('shop.cart');
+
+    public function mount($slug)
+    {
+        $this->slug = $slug;
     }
 
     public function render()
     {
-        $product =Product::where('slug',$this->slug)->first();
-        $rproducts =Product::where('category_id',$product->category_id)->inRandomOrder()->limit(4)->get();
-        $nproducts = Product::latest()->take(4)->get();
-        $categories = Category::orderBy('name','ASC')->get();
-        return view('livewire.details-component',['product'=>$product,'rproducts'=>$rproducts,'nproducts'=>$nproducts,'categories'=>$categories]);
+        $place = Place::where('slug', $this->slug)->first();
+        $recommended_place = Place::where('province_id', $place->province_id)->inRandomOrder()->limit(4)->get();
+        $pplace = Place::latest()->take(4)->get();
+        $province = Province::orderBy('name', 'ASC')->get();
+        return view('livewire.details-component', ['place' => $place, 'recommended_place' => $recommended_place, 'pplace' => $pplace, 'province' => $province]);
     }
 }
 

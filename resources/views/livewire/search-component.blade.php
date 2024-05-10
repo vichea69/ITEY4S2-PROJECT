@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="breadcrumb">
                     <a href="#" rel="nofollow">Home</a>
-                    <span></span> Shop
+                    <span></span> Place
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you!</p>
+                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> Place for you!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="product-content-wrap">
                                             <div class="product-category">
-                                                <a href="#">Device Plaza</a>
+                                                <a href="#">Der Leng</a>
                                             </div>
                                             <h2><a href="#">{{$product->name}}</a></h2>
                                             <div class="rating-result" title="90%">
@@ -85,10 +85,7 @@
                                                 <span></span>
                                             </span>
                                             </div>
-                                            <div class="product-price">
-                                                <span>${{$product->regular_price}} </span>
-                                                {{--                                            <span class="old-price">$245.8</span>--}}
-                                            </div>
+                                            
                                             <div class="product-action-1 show">
                                                 <a aria-label="Add To Cart" class="action-btn hover-up" href="" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fi-rs-shopping-bag-add"></i></a>
                                             </div>
