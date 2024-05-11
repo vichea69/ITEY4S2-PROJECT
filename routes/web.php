@@ -52,12 +52,8 @@ Route::middleware(['auth', '\App\Http\Middleware\AuthAdmin'])->group(function ()
     Route::get('/admin/place/add', AdminAddPlaceComponent::class)->name('admin.place.add');
     Route::get('/admin/place/edit/{place_id}', AdminEditPlaceComponent::class)->name('admin.place.edit');
     Route::get('/admin/place/delete/{place_id}', AdminPlaceComponent::class)->name('admin.place.delete');
-
 });
-//User
-//Route::get('/user/place', UserPlaceComponent::class)->name('user.place');
-//Route::get('/user/province', UserProvinceComponent::class)->name('user.province');
-//Route::get('/user/place/add', UserAddPlaceComponent::class)->name('user.place.add');
+
 
 Route::get('/', HomeComponent::class)->name('home.index');
 Route::get('/place', PlaceComponent::class)->name('place');
