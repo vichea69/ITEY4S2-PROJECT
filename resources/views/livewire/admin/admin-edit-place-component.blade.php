@@ -47,9 +47,9 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 mt-3">
-                                    <label for="short_description" class="form-label">Short Description</label>
+                                    <label for="short_description" class="form-label">Location </label>
                                     <textarea class="form-control" name="short_description"
-                                              placeholder="Enter short_description"
+                                              placeholder="Input Google Map link here"
                                               wire:model="short_description"></textarea>
                                     @error('short_description')
                                     <p class="text-danger">{{$message}}</p>

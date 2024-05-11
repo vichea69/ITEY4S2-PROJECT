@@ -43,7 +43,16 @@
                                             {{$place->description}}
                                         </div>
 
-                                        <div class="bt-1 border-color-1 mt-30 mb-30"></div>
+                                        <div class="bt-1 border-color-1 mt-30 mb-30">
+                                            <div class="pro-details-brand">
+                                                {{--                                                <span> Location: <a href="">Google Map</a>{{$place->link}}</span>--}}
+                                                <div class="pro-details-brand">
+                                                    <span> Location: <a href="{{ $place->short_description }}"
+                                                                        target="_blank">Google Map</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <!-- Detail Info -->
