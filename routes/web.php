@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Livewire\User\UserAddPlaceComponent;
+use App\Http\Livewire\User\UserAddProvinceComponent;
+use App\Http\Livewire\User\UserEditPlaceComponent;
+use App\Http\Livewire\User\UserEditProvinceComponent;
+use App\Http\Livewire\User\UserPlaceComponent;
+use App\Http\Livewire\User\UserProvinceComponent;
 use App\Http\Middleware\AuthAdmin;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\PlaceComponent;
@@ -29,6 +35,12 @@ use App\Http\Livewire\Admin\AdminEditProvinceComponent;
 */
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/place', UserPlaceComponent::class)->name('user.place');
+    Route::get('/user/province', UserProvinceComponent::class)->name('user.province');
+    Route::get('/user/place/add', UserAddPlaceComponent::class)->name('user.place.add');
+    Route::get('/user/place/edit/{place_id}', UserEditPlaceComponent::class)->name('user.place.edit');
+    Route::get('/user/province/add', UserAddProvinceComponent::class)->name('user.province.add');
+    Route::get('/user/province/edit/{province_id}', UserEditProvinceComponent::class)->name('user.province.edit');
 });
 Route::middleware(['auth', '\App\Http\Middleware\AuthAdmin'])->group(function () {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
@@ -42,6 +54,10 @@ Route::middleware(['auth', '\App\Http\Middleware\AuthAdmin'])->group(function ()
     Route::get('/admin/place/delete/{place_id}', AdminPlaceComponent::class)->name('admin.place.delete');
 
 });
+//User
+//Route::get('/user/place', UserPlaceComponent::class)->name('user.place');
+//Route::get('/user/province', UserProvinceComponent::class)->name('user.province');
+//Route::get('/user/place/add', UserAddPlaceComponent::class)->name('user.place.add');
 
 Route::get('/', HomeComponent::class)->name('home.index');
 Route::get('/place', PlaceComponent::class)->name('place');

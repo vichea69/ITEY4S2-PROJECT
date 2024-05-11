@@ -99,6 +99,8 @@
                                             {{-- Add this else block --}}
                                             <ul class="sub-menu">
                                                 <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                                <li><a href="{{ route('user.place') }}">Place</a></li>
+                                                <li><a href="{{ route('user.province') }}">Province</a></li>
                                             </ul>
                                         @endif
                                     </li>
