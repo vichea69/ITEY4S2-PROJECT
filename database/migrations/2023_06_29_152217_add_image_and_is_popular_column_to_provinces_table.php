@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('categories', function (Blueprint $table) {
+        Schema::table('provinces', function (Blueprint $table) {
             //
             $table->string('image');
             $table->boolean('is_popular')->default(false);
@@ -23,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('categories', function (Blueprint $table) {
+        Schema::table('provinces', function (Blueprint $table) {
             //
             $table->dropColumn(['image','is_popular']);
         });
